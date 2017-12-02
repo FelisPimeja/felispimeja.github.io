@@ -39,11 +39,21 @@
           id: 'mapbox.streets'
       }).addTo(mymap);
 
+      var shubert = L.tileLayer('https://api.mapbox.com/styles/v1/felispimeja/cjapvswvt2mxv2smqgbaskqpt/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZmVsaXNwaW1lamEiLCJhIjoiNV8yWXZKNCJ9.ugZh_TKGaBGLW_uue2O0mA', {
+          maxZoom: 14,
+          opacity: 0.3,
+          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+          '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+          id: 'mapbox.streets'
+      }).addTo(mymap);
+
       var baseMaps = {
           "Спутниковая подложка Bing": bingLayer
       };
       var overlayMaps = {
-          "План землеустройства 1983г.": planZemleustroistva
+          "План землеустройства 1983г.": planZemleustroistva,
+          "Трёхвёрстка Шуберта 1878г.": shubert
       };
 
       L.control.layers(baseMaps, overlayMaps).addTo(mymap);
