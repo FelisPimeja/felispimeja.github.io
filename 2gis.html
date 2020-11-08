@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Моя карта</title> 
+    <script type="text/javascript" src="http://maps.api.2gis.ru/1.0"></script> 
+    <script type="text/javascript"> 
+        // Создаем обработчик загрузки страницы: 
+        DG.autoload(function() { 
+            // Создаем объект карты, связанный с контейнером: 
+            var myMap = new DG.Map('myMapId'); 
+            // Устанавливаем центр карты, и коэффициент масштабирования: 
+            myMap.setCenter(new DG.GeoPoint(82.927810142519,55.028936234826), 15); 
+            // Добавляем элемент управления коэффициентом масштабирования: 
+            myMap.controls.add(new DG.Controls.Zoom()); 
+ 
+                        // Создаем балун:
+            var myBalloon = new DG.Balloons.Common({
+                // Местоположение на которое указывает балун: 
+                 geoPoint: new DG.GeoPoint(82.927810142519,55.028936234826),
+                 // Устанавливаем текст, который будет отображатся при открытии балуна:
+                 contentHtml: 'Привет!<br>Вы кликнули по мне :)'
+            });
+            // Создаем маркер:
+            var myMarker = new DG.Markers.Common({
+                 // Местоположение на которое указывает маркер:
+                 geoPoint: new DG.GeoPoint(82.927810142519,55.028936234826),
+                 // Функция, вызываемая при клике по маркеру
+                 clickCallback: function() {
+                    if (! myMap.balloons.getDefaultGroup().contains(myBalloon)) {
+                        // Если балун еще не был добавлен на карту, добавляем его:
+                         myMap.balloons.add(myBalloon);
+                     } else {
+                         // Показываем уже ранее добавленный на карту балун
+                         myBalloon.show();
+                     }
+                }
+            });
+            // Добавить маркер на карту:
+            myMap.markers.add(myMarker);
+        }); 
+    </script> 
+</head> 
+<body> 
+    <div id="myMapId" style="width:500px; height:400px"></div> 
+</body> 
+</html>
