@@ -250,6 +250,15 @@
 		text-align: right;
 	}
 
+	.wide {
+		width: 100%;
+		margin: 2em 0 0 0;
+	}
+	
+	.indent {
+		padding-left: 20px;
+	}
+
 /* Row */
 
 	.row {
@@ -2682,9 +2691,20 @@
 			border-right: 0;
 		}
 
-			table tbody tr:nth-child(2n + 1) {
+		table.no-margin {
+			margin: 2em 0 0 0;
+		}
+		
+		table.no-border tbody tr {
+			border: 0;
+			border-left: 0;
+			border-right: 0;
+		}
+
+
+		/*	table tbody tr:nth-child(2n + 1) {
 				background-color: #f8f8f8;
-			}
+			} */
 
 		table td {
 			padding: 0.75em 0.75em;
