@@ -2232,7 +2232,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 2em 1em;
 		padding-left: 1em;
 	}
 
