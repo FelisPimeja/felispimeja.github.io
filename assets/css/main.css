@@ -3391,6 +3391,14 @@ input, select, textarea {
 
 		}
 
+.video{
+	width: 100%;
+	height: auto;
+	margin: 0 2em 2em 0;
+	transition: 1s opacity;
+	z-index:-1;
+}  
+		
 /* Banner */
 
 	#banner {
