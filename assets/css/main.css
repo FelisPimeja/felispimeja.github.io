@@ -2762,6 +2762,13 @@ input, select, textarea {
 			.tiles article header {
 				position: relative;
 				z-index: 3;
+				opacity: 0;
+			}
+
+			.tiles article:hover header {
+				position: relative;
+				z-index: 3;
+				opacity: 1;
 			}
 
 			.tiles article h3 {
@@ -2811,7 +2818,7 @@ input, select, textarea {
 			}
 
 			.tiles article:hover:before {
-				opacity: 0;
+				background-color: hsla(0, 0%, 0%, 0.5);
 			}
 
 			.tiles article.is-transitioning {
@@ -2830,7 +2837,7 @@ input, select, textarea {
 				width: 60%;
 			}
 
-			.tiles article:nth-child(6n - 5):before {
+			/* .tiles article:nth-child(6n - 5):before {
 				background-color: #6fc3df;
 			}
 
@@ -2852,7 +2859,7 @@ input, select, textarea {
 
 			.tiles article:nth-child(6n):before {
 				background-color: #87c5a4;
-			}
+			} */
 
 		@media screen and (max-width: 1280px) {
 
