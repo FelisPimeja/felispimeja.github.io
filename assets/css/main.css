@@ -2769,6 +2769,12 @@ input, select, textarea {
 				position: relative;
 				z-index: 3;
 				opacity: 1;
+				-moz-transition: opacity 0.5s ease;
+				-webkit-transition: opacity 0.5s ease;
+				-ms-transition: opacity 0.5s ease;
+				transition: opacity 0.5s ease;
+				transition: transform 0.5s;
+				transform: translate(0px, -20px);
 			}
 
 			.tiles article h3 {
@@ -2819,6 +2825,11 @@ input, select, textarea {
 
 			.tiles article:hover:before {
 				background-color: hsla(0, 0%, 0%, 0.5);
+				-moz-transition: background-color 0.5s ease;
+				-webkit-transition: background-color 0.5s ease;
+				-ms-transition: background-color 0.5s ease;
+				transition: background-color 0.5s ease;
+
 			}
 
 			.tiles article.is-transitioning {
