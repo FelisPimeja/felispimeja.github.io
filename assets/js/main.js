@@ -340,17 +340,15 @@
 var dark_mode = document.getElementById("dark_mode_icon");
 
 if(localStorage.getItem("theme") == null){
-	localStorage.setItem("theme", "light");
+	localStorage.setItem("theme", "dark");
 };
-
-
 
 let LocalData = localStorage.getItem("theme");
 
-if(LocalData == "light"){
-	document.body.classList.remove("dark-mode");
-}else{
+if(LocalData == "dark"){
 	document.body.classList.add("dark-mode");
+}else{
+	document.body.classList.remove("dark-mode");
 };
 
 dark_mode.onclick = function(){

@@ -3988,3 +3988,31 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+/* #dark_mode_icon {
+	background-color: var(--secondary-color);
+	width: 3.5em;
+	height: 2em;
+	border-radius: 2em;
+	border: 0;
+}
+
+	#dark_mode_icon:hover {
+		background-color: var(--hover-color);
+	}
+
+#dark_mode_icon span {
+	background-color: var(--primary-color);
+	border: 0;
+	width: 1.7em;
+	height: 1.7em;
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	top: 36%; left: 0%;
+	transform: translate(-85%,-50%);
+}
+
+.dark-mode #dark_mode_icon:active span {
+	transform: translate(-10%,-50%);
+} */
