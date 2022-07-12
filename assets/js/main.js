@@ -338,6 +338,27 @@
 /*  Dark mode logic  */
 
 var dark_mode = document.getElementById("dark_mode_icon");
+
+if(localStorage.getItem("theme") == null){
+	localStorage.setItem("theme", "light");
+};
+
+
+
+let LocalData = localStorage.getItem("theme");
+
+if(LocalData == "light"){
+	document.body.classList.remove("dark-mode");
+}else{
+	document.body.classList.add("dark-mode");
+};
+
 dark_mode.onclick = function(){
     document.body.classList.toggle("dark-mode");
+	if(document.body.classList.contains("dark-mode")){
+		localStorage.setItem("theme", "dark");
+	}
+	else{
+		localStorage.setItem("theme", "light");
+	};
 };
