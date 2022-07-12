@@ -34,11 +34,10 @@
 							<!-- <li><a href="landing.html">Landing</a></li>
 							<li><a href="generic.html">Generic</a></li>
 							<li><a href="elements.html">Elements</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
 						</ul> -->
+						<ul class="actions stacked">
+							<li><a href="#" class="button small fit" id="dark_mode_icon">Dark mode</a></li>
+						</ul>
 					</nav>
 
 				<!-- Banner -->
@@ -159,6 +158,12 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				var dark_mode = document.getElementById("dark_mode_icon");
+				dark_mode.onclick = function(){
+					document.body.classList.toggle("dark-mode");
+				}
+			</script>
 
 	</body>
 </html>
