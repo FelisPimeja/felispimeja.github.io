@@ -11,12 +11,14 @@
 	--primary-color: #242943;
 	--secondary-color: #ffffff;
 	--hover-color: #9bf1ff;
+	--form-background: rgba(161, 161, 255, 0.25);
 }
 
 .dark-mode {
 	--primary-color: #ffffff;
 	--secondary-color: #242943;
 	--hover-color: #6fc3df;
+	--form-background: rgba(36, 41, 67, 0.1);
 }
 
 html, body, div, span, applet, object,
@@ -1923,7 +1925,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(212, 212, 255, 0.035);
+		background: var(--form-background);
 		border: none;
 		border-radius: 0;
 		color: inherit;
@@ -1932,6 +1934,7 @@ input, select, textarea {
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
+		filter: opacity(85%);
 	}
 
 		input[type="text"]:invalid,
@@ -3976,7 +3979,7 @@ input, select, textarea {
 
 	body.is-menu-visible #menu {
 		pointer-events: auto;
-		opacity: 1;
+		opacity: 0.7;
 		visibility: visible;
 	}
 
@@ -4015,4 +4018,46 @@ input, select, textarea {
 
 .dark-mode #dark_mode_icon:active span {
 	transform: translate(-10%,-50%);
+} */
+
+
+
+/* Desktop menu */
+
+/* @media all and (min-width: 900px) {
+	
+	#header nav {
+		display: none;
+	}
+
+    #menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+    }
+     .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+        position: relative;
+        display: block; 
+        width: auto;
+    }
+    .button {
+        order: 2;
+    }
+    .submenu-active .submenu {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 68px;
+        background: #111;
+    }
+    .toggle {
+        display: none;
+    }
+    .submenu-active {
+        border-radius: 0;
+    } 
 } */
