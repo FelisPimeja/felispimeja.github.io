@@ -3796,7 +3796,14 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-		#wrapper > *:not(#contact) > .inner {
+		#wrapper > * > .inner {
+			padding: 4em 0 2em 0 ;
+			margin: 0 auto;
+			max-width: 65em;
+			width: calc(100% - 6em);
+		}
+
+		#wrapper > #footer > .inner {
 			padding: 4em 0 2em 0 ;
 			margin: 0 auto;
 			max-width: 65em;
@@ -3804,13 +3811,6 @@ input, select, textarea {
 			display: flex;
 			flex-direction: column;
 			text-align: center;
-		}
-
-		#wrapper > #contact > .inner {
-			padding: 4em 0 2em 0 ;
-			margin: 0 auto;
-			max-width: 65em;
-			width: calc(100% - 6em);
 		}
 
 			@media screen and (max-width: 736px) {
@@ -4079,6 +4079,10 @@ input, select, textarea {
 
 /* Localization  */
 
-[lang="ru"] {
+body[lang="en"] [lang="ru"] {
+	display: none !important ;
+}
+
+body[lang="ru"] [lang="en"] {
 	display: none !important ;
 }
