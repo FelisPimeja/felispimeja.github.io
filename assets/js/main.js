@@ -337,7 +337,7 @@
 
 /*  Dark mode logic  */
 
-var dark_mode = document.getElementById("dark_mode_icon");
+var dark_mode = document.getElementsByClassName("dark_mode_icon");
 
 if(localStorage.getItem("theme") == null){
 	localStorage.setItem("theme", "dark");
