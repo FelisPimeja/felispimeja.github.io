@@ -3753,6 +3753,7 @@ input, select, textarea {
 		font-size: 0.8em;
 		list-style: none;
 		padding-left: 0;
+		opacity: 0.4;
 	}
 
 		#footer .copyright li {
@@ -3892,6 +3893,7 @@ input, select, textarea {
 
 			#menu .inner > :last-child {
 				margin-bottom: 3em;
+				padding: 0 4em 0 4em;
 			}
 
 		#menu ul {
@@ -4005,6 +4007,11 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+#language {
+	text-align: center;
+    padding-left: 2.5em;
+}
 
 /* #dark_mode_icon {
 	background-color: var(--secondary-color);
