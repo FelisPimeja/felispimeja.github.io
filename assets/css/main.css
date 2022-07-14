@@ -1796,7 +1796,8 @@ input, select, textarea {
 			width: calc(100% + 0.5em);
 		}
 
-			header.major > :first-child:after {
+			header.major > :first-child:after,
+			header.major > :nth-child(2):after {
 				content: '';
 				background-color: var(--secondary-color);
 				display: block;
@@ -1813,7 +1814,7 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-		body.is-ie header.major > :first-child:after {
+		body.is-ie header.major > :first-child:after{
 			max-width: 9em;
 		}
 
