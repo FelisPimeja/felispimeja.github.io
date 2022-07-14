@@ -385,3 +385,34 @@ theme_toggle2.onclick = function(){
 };
 
 
+
+/*  Localization logic  */
+
+if(localStorage.getItem('lang') == null) {
+	console.log(null);
+
+	localStorage.setItem('lang', 1);
+	console.log(localStorage.getItem('lang'));
+
+}
+
+var select = document.querySelector("#language");
+var selectOption = select.options[select.selectedIndex];
+var lastSelected = localStorage.getItem('lang');
+
+if(lastSelected) {
+    select.value = lastSelected; 
+}
+
+select.onchange = function () {
+   lastSelected = select.options[select.selectedIndex].value;
+   console.log(lastSelected);
+   localStorage.setItem('lang', lastSelected);
+
+   	if(lastSelected == 1){
+		document.getElementsByTagName('body')[0].setAttribute('lang', 'en');
+	}
+	else{
+		document.getElementsByTagName('body')[0].setAttribute('lang', 'ru');
+	};
+}
