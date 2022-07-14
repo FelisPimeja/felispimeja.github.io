@@ -14,7 +14,7 @@
 	--form-background: rgba(161, 161, 255, 0.25);
 }
 
-.dark-mode {
+.light-theme {
 	--primary-color: #ffffff;
 	--secondary-color: #242943;
 	--hover-color: #6fc3df;

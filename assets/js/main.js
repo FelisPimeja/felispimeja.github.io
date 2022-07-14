@@ -337,26 +337,51 @@
 
 /*  Dark mode logic  */
 
-var dark_mode = document.getElementsByClassName("dark_mode_icon");
+var theme_toggle1 = document.getElementById("theme_toggle1");
+var theme_toggle2 = document.getElementById("theme_toggle2");
 
+console.log("1. localStorage_getItem_theme = " + localStorage.getItem("theme"));
 if(localStorage.getItem("theme") == null){
 	localStorage.setItem("theme", "dark");
 };
+console.log("2. localStorage_getItem_theme = " + localStorage.getItem("theme"));
 
-let LocalData = localStorage.getItem("theme");
+let localTheme = localStorage.getItem("theme");
+console.log("3. localTheme = " + localTheme);
 
-if(LocalData == "dark"){
-	document.body.classList.add("dark-mode");
+if(localTheme == "dark"){
+	document.body.classList.remove("light-theme");
 }else{
-	document.body.classList.remove("dark-mode");
+	document.body.classList.add("light-theme");
+};
+console.log("4. document.body.classList = " + document.body.classList);
+
+theme_toggle1.onclick = function(){
+	console.log("5. before - document.body.classList = " + document.body.classList);
+    document.body.classList.toggle("light-theme");
+	console.log("6. after - document.body.classList = " + document.body.classList);
+
+	if(document.body.classList.contains("light-theme")){
+		localStorage.setItem("theme", "light");
+	}
+	else {
+		localStorage.setItem("theme", "dark");
+	};
+	console.log("7. localStorage.getItem_theme = " + localStorage.getItem("theme"));
 };
 
-dark_mode.onclick = function(){
-    document.body.classList.toggle("dark-mode");
-	if(document.body.classList.contains("dark-mode")){
-		localStorage.setItem("theme", "dark");
-	}
-	else{
+theme_toggle2.onclick = function(){
+	console.log("5. before - document.body.classList = " + document.body.classList);
+    document.body.classList.toggle("light-theme");
+	console.log("6. after - document.body.classList = " + document.body.classList);
+
+	if(document.body.classList.contains("light-theme")){
 		localStorage.setItem("theme", "light");
+	}
+	else {
+		localStorage.setItem("theme", "dark");
 	};
+	console.log("7. localStorage.getItem_theme = " + localStorage.getItem("theme"));
 };
+
+
