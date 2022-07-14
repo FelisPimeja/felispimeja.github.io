@@ -2959,7 +2959,7 @@ input, select, textarea {
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 			flex-direction: row;
-			background-color: #2e3450;
+			background-color: var(--primary-color);
 		}
 
 			.spotlights > section > .image {
@@ -3021,7 +3021,7 @@ input, select, textarea {
 				-webkit-flex-direction: row-reverse;
 				-ms-flex-direction: row-reverse;
 				flex-direction: row-reverse;
-				background-color: #333856;
+				background-color: var(--primary-color);
 			}
 
 				.spotlights > section:nth-child(2n) > .content {
@@ -3630,7 +3630,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #2a2f4a;
+		background-color: var(--primary-color);
 	}
 
 		#main > * {
