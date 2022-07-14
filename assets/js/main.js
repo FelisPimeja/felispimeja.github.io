@@ -340,26 +340,20 @@
 var theme_toggle1 = document.getElementById("theme_toggle1");
 var theme_toggle2 = document.getElementById("theme_toggle2");
 
-console.log("1. localStorage_getItem_theme = " + localStorage.getItem("theme"));
 if(localStorage.getItem("theme") == null){
 	localStorage.setItem("theme", "dark");
 };
-console.log("2. localStorage_getItem_theme = " + localStorage.getItem("theme"));
 
 let localTheme = localStorage.getItem("theme");
-console.log("3. localTheme = " + localTheme);
 
 if(localTheme == "dark"){
 	document.body.classList.remove("light-theme");
 }else{
 	document.body.classList.add("light-theme");
 };
-console.log("4. document.body.classList = " + document.body.classList);
 
 theme_toggle1.onclick = function(){
-	console.log("5. before - document.body.classList = " + document.body.classList);
     document.body.classList.toggle("light-theme");
-	console.log("6. after - document.body.classList = " + document.body.classList);
 
 	if(document.body.classList.contains("light-theme")){
 		localStorage.setItem("theme", "light");
@@ -367,13 +361,10 @@ theme_toggle1.onclick = function(){
 	else {
 		localStorage.setItem("theme", "dark");
 	};
-	console.log("7. localStorage.getItem_theme = " + localStorage.getItem("theme"));
 };
 
 theme_toggle2.onclick = function(){
-	console.log("5. before - document.body.classList = " + document.body.classList);
     document.body.classList.toggle("light-theme");
-	console.log("6. after - document.body.classList = " + document.body.classList);
 
 	if(document.body.classList.contains("light-theme")){
 		localStorage.setItem("theme", "light");
@@ -381,19 +372,18 @@ theme_toggle2.onclick = function(){
 	else {
 		localStorage.setItem("theme", "dark");
 	};
-	console.log("7. localStorage.getItem_theme = " + localStorage.getItem("theme"));
 };
 
 
 
 /*  Localization logic  */
 
-if(localStorage.getItem('lang') == null) {
-	console.log(null);
-
+if(localStorage.getItem('lang') == 2) {
+	document.getElementsByTagName('body')[0].setAttribute('lang', 'ru');
+}
+else {
 	localStorage.setItem('lang', 1);
-	console.log(localStorage.getItem('lang'));
-
+	document.getElementsByTagName('body')[0].setAttribute('lang', 'en');
 }
 
 var select = document.querySelector("#language");
@@ -406,7 +396,6 @@ if(lastSelected) {
 
 select.onchange = function () {
    lastSelected = select.options[select.selectedIndex].value;
-   console.log(lastSelected);
    localStorage.setItem('lang', lastSelected);
 
    	if(lastSelected == 1){
