@@ -2186,7 +2186,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 30%;
+			max-width: 50%;
 		}
 
 			.image.left img, .image.right img {
@@ -3801,13 +3801,19 @@ input, select, textarea {
 			margin: 0 auto;
 			max-width: 65em;
 			width: calc(100% - 6em);
+			display: flex;
+			flex-direction: column;
+			text-align: center;
 		}
 
 			@media screen and (max-width: 736px) {
 
 				#wrapper > * > .inner {
-					padding: 3em 0 1em 0 ;
+					padding: 2em 0 2em 0 ;
 					width: calc(100% - 3em);
+					display: flex;
+					flex-direction: column;
+					text-align: center;
 				}
 
 			}
