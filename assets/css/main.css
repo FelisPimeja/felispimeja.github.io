@@ -4075,3 +4075,10 @@ input, select, textarea {
         border-radius: 0;
     } 
 } */
+
+
+/* Localization  */
+
+[lang="ru"] {
+	display: none !important ;
+}
