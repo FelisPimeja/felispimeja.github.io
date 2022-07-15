@@ -337,8 +337,7 @@
 
 /*  Dark mode logic  */
 
-var theme_toggle1 = document.getElementById("theme_toggle1");
-var theme_toggle2 = document.getElementById("theme_toggle2");
+var theme_toggle1 = document.getElementById("theme_toggle");
 
 if(localStorage.getItem("theme") == null){
 	localStorage.setItem("theme", "dark");
@@ -352,18 +351,7 @@ if(localTheme == "dark"){
 	document.body.classList.add("light-theme");
 };
 
-theme_toggle1.onclick = function(){
-    document.body.classList.toggle("light-theme");
-
-	if(document.body.classList.contains("light-theme")){
-		localStorage.setItem("theme", "light");
-	}
-	else {
-		localStorage.setItem("theme", "dark");
-	};
-};
-
-theme_toggle2.onclick = function(){
+theme_toggle.onclick = function(){
     document.body.classList.toggle("light-theme");
 
 	if(document.body.classList.contains("light-theme")){

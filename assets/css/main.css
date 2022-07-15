@@ -4085,7 +4085,10 @@ input, select, textarea {
 } */
 
 
-/* Leaflet night theme */
+/*  Leaflet night theme 
+	https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/create-a-light-or-dark-version-of-any-map-in-two-seconds/
+*/
+
 img.leaflet-tile {
     filter: invert(100%) hue-rotate(180deg);
 }
