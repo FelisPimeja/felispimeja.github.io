@@ -4085,6 +4085,12 @@ input, select, textarea {
 } */
 
 
+/* Leaflet night theme */
+img.leaflet-tile {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+
 /* Localization  */
 
 body[lang="en"] [lang="ru"] {
