@@ -52,4 +52,6 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
+          FILTER_REGEX_EXCLUDE: (/bak/.*|/images/.*|/videos/.*|/assets/.*)
+          FILTER_REGEX_INCLUDE: (/assets/js/main.js|assets/css/main.css)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
